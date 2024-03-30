@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SAFIA-STORE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+  li {
+  background-color: #f2f2f2;
+  padding: 8px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #ddd;
+}
+    
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Safia Store</h1>      
+    <p>Mision, Vision & Valores</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li onclick="cambiarLi(1)"class="active"><a href="#">Home</a></li>
+        <li onclick="cambiarLi(2)"><a href="#">Productos</a></li>
+        <li onclick="cambiarLi(3)"><a href="#">Detalles</a></li>
+        <li onclick="cambiarLi(4)"><a href="#">Stores</a></li>
+        <li onclick="cambiarLi(5)"><a href="#">Contactos</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span th:text="${usuario.user}" class="glyphicon glyphicon-user"></span> </a></li>
+        <li><a href="#"><span  class="glyphicon glyphicon-shopping-cart"></span>Mi Carrito</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="contenido">
+  <div id="contenido1" style="display:none">
+    <h2>Contenido del Elemento 1</h2>
+    
+    
+    <p>Este es el contenido del Elemento 1...</p>
+  </div>
+  <div id="contenido2" style="display:none">
+    <h2>Contenido del Elemento 2</h2>
+    
+    <div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">CARTIER</div>
+        <div class="panel-body"><img src="static/img/cartier2.jpg" th:src="@{/img/cartier2.jpg}" class="img-responsive" style="width:100%"  alt="Image" ></div>
+        <div class="panel-footer"> € 28.400 </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">ROLEX</div>
+        <div class="panel-body"><img src="static/img/rolex1.jpg" th:src="@{/img/rolex1.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 10.665,38</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">CARTIER</div>
+        <div class="panel-body"><img src="static/img/cartier1.jpg" th:src="@{/img/cartier1.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 30.700</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">AUDEMARS PIGUET</div>
+        <div class="panel-body"><img src="static/img/AUDEMARS PIGUET.jpg" th:src="@{/img/AUDEMARS PIGUET.jpg}" class="img-responsive" style="width:100%"  alt="Image" ></div>
+        <div class="panel-footer">€ 19.000</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">LANGE Y SOHNE</div>
+        <div class="panel-body"><img src="static/img/LANGE Y SOHNE2.jpg" th:src="@{/img/LANGE Y SOHNE2.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 21.978</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">PIAGET</div>
+        <div class="panel-body"><img src="static/img/PIAGET1.jpg" th:src="@{/img/PIAGET1.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 25.902</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">HUBLOT</div>
+        <div class="panel-body"><img src="static/img/HUBLOT2.jpg" th:src="@{/img/HUBLOT2.jpg}" class="img-responsive" style="width:100%" alt="Image" ></div>
+        <div class="panel-footer">€ 42.000</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">LOUIS VUITTON</div>
+        <div class="panel-body"><img src="static/img/LOUIS VUITTON.jpg" th:src="@{/img/LOUIS VUITTON.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 25.000</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">LOUIS VUITTON</div>
+        <div class="panel-body"><img src="static/img/LOUIS VUITTON2.jpg" th:src="@{/img/LOUIS VUITTON2.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 25.000</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">HUBLOT</div>
+        <div class="panel-body"><img src="static/img/HUBLOT1.jpg" th:src="@{/img/HUBLOT1.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 42.000</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">PANERAI</div>
+        <div class="panel-body"><img src="static/img/PANERAI2.jpg" th:src="@{/img/PANERAI2.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 63.000</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">ROLEX</div>
+        <div class="panel-body"><img src="static/img/rolex2.jpg" th:src="@{/img/rolex2.jpg}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">€ 43.000</div>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+</div><br><br>
+    <p>Este es el contenido del Elemento 2...</p>
+  </div>
+  <div id="contenido3" style="display:none">
+    <h2>Contenido del Elemento 3</h2>
+    
+    <p>Este es el contenido del Elemento 3...</p>
+  </div>
+   <div id="contenido4" style="display:none">
+    <h2>Contenido del Elemento 4</h2>
+    <p>Este es el contenido del Elemento 4...</p>
+  </div>
+   <div id="contenido5" style="display:none">
+    <h2>Contenido del Elemento 5</h2>
+    <p>Este es el contenido del Elemento 5...</p>
+  </div>
+  
+</div>
+
+
+
+
+<footer class="container-fluid text-center">
+  <br>
+  <p>Safia Store Copyright</p>  
+  </br>
+  <p>Autor:Luis alfredo</p>  
+</footer>
+
+<script>
+// Función para cambiar el contenido al hacer clic en un elemento de la lista
+function cambiarLi(numero) {
+  var contenidos = document.querySelectorAll('#contenido > div');
+  for(var i = 0; i < contenidos.length; i++) {
+    if(contenidos[i].id === 'contenido' + numero) {
+      contenidos[i].style.display = 'block';
+    } else {
+      contenidos[i].style.display = 'none';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+

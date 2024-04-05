@@ -31,7 +31,6 @@
   padding: 0;
   }
   li {
-  background-color: rgb(234, 251, 249);
   padding: 8px;
   margin-bottom: 2px;
   cursor: pointer;
@@ -46,24 +45,43 @@ li:hover {
     height: 200px; 
 }
 
-logo
+.logo2 {
+
+    width: 300px; /* Ancho deseado */
+    height: 300px; /* Altura deseada */
+    border-radius: 50%; /* Hace que los bordes de la imagen sean circulares */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+
+   
+}
+
+.jumbotron{
+    background: url(../img/logo.jpg) no-repeat center center fixed;
+    background-size: cover;
+   
+ 
+}
+
+   
+ .encabezado{
+    
+ 
+    color: violet; /* Cambia el color del texto a violeta */
+    
+    font-size: 30px; /* Aumenta el tamaño de letra a 48 pixels */
+    text-align: center; /* Centra el texto */
+ }  
+ h1 {
+            font-size: 50px; /* Tamaño de letra grande */
+     }
     
   </style>
 </head>
 <body>
-
-<div  class="jumbotron">
-<div class="logo">
-<img src="static/img/logo.jpg" th:src="@{/img/logo.jpg}"/>
-</div>
-
-  <div class="container text-center">
-     
+ <div class="encabezado">
     <h1>Safia Store</h1>      
     <p>Mision, Vision & Valores</p>
   </div>
-</div>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -72,7 +90,7 @@ logo
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="">Logo</a>
+      <a class="navbar-brand" img src="static/img/logo.jpg" th:href="@{/img/logo.jpg}" >Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -88,17 +106,23 @@ logo
       </ul>
     </div>
   </div>
-</nav>
-
-<div id="contenido">
+  
+  <div  class="jumbotron">
+ <img src="static/img/logo.jpg" class="logo2" th:src="@{/img/logo.jpg}"/>
+ 
+  <!--Este es el elemento div para el contenido de home-->
+  <div id="contenido">
   <div id="contenido1" style="display:none">
-    <h2>Contenido del Elemento 1</h2>
+    
     
     
     <p>Este es el contenido del Elemento 1...</p>
   </div>
+  
+  
+  <!--Este es el elemento div para el contenido de los productos-->
   <div id="contenido2" style="display:none">
-    <h2>Contenido del Elemento 2</h2>
+    
     
     <div class="container">    
   <div class="row">
@@ -106,14 +130,15 @@ logo
       <div class="panel panel-primary">
         <div class="panel-heading">CARTIER</div>
         <div class="panel-body"><img src="static/img/cartier2.jpg" th:src="@{/img/cartier2.jpg}" class="responsive"   alt="Image" ></div>
-       <div class="panel-footer"> € 28.400 </div>
-        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+       <div class="panel-footer" > € 28.400 </div>
+      
+      </div>
+  <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
   <input type="hidden" name="cmd" value="_s-xclick" />
   <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
   <input type="hidden" name="currency_code" value="EUR" />
   <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
 </form>
-      </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
@@ -121,6 +146,12 @@ logo
         <div class="panel-body"><img src="static/img/rolex1.jpg" th:src="@{/img/rolex1.jpg}" class="responsive"  alt="Image"></div>
         <div class="panel-footer">€ 10.665,38</div>
       </div>
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
@@ -129,6 +160,12 @@ logo
         <div class="panel-footer">€ 30.700</div>
       </div>
     </div>
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
   </div>
 </div><br>
 
@@ -140,6 +177,12 @@ logo
         <div class="panel-body"><img src="static/img/AUDEMARS PIGUET.jpg" th:src="@{/img/AUDEMARS PIGUET.jpg}" class="responsive"   alt="Image" ></div>
         <div class="panel-footer">€ 19.000</div>
       </div>
+       <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
@@ -147,6 +190,12 @@ logo
         <div class="panel-body"><img src="static/img/LANGE Y SOHNE2.jpg" th:src="@{/img/LANGE Y SOHNE2.jpg}" class="responsive"  alt="Image"></div>
         <div class="panel-footer">€ 21.978</div>
       </div>
+       <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
@@ -155,6 +204,12 @@ logo
         <div class="panel-footer">€ 25.902</div>
       </div>
     </div>
+     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
   </div>
 </div><br>
 
@@ -166,6 +221,12 @@ logo
         <div class="panel-body"><img src="static/img/HUBLOT2.jpg" th:src="@{/img/HUBLOT2.jpg}" class="responsive"  alt="Image" ></div>
         <div class="panel-footer">€ 42.000</div>
       </div>
+       <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
@@ -173,6 +234,12 @@ logo
         <div class="panel-body"><img src="static/img/LOUIS VUITTON.jpg" th:src="@{/img/LOUIS VUITTON.jpg}" class="responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">€ 25.000</div>
       </div>
+       <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
@@ -181,6 +248,12 @@ logo
         <div class="panel-footer">€ 25.000</div>
       </div>
     </div>
+     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
   </div>
 </div><br>
 
@@ -192,6 +265,12 @@ logo
         <div class="panel-body"><img src="static/img/HUBLOT1.jpg" th:src="@{/img/HUBLOT1.jpg}" class="responsive"  alt="Image"></div>
         <div class="panel-footer">€ 42.000</div>
       </div>
+       <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
@@ -199,6 +278,12 @@ logo
         <div class="panel-body"><img src="static/img/PANERAI2.jpg" th:src="@{/img/PANERAI2.jpg}" class="responsive"  alt="Image"></div>
         <div class="panel-footer">€ 63.000</div>
       </div>
+       <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
@@ -208,27 +293,61 @@ logo
       </div>
     </div>
     
-    
+     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
     
   </div>
 </div><br><br>
-    <p>Este es el contenido del Elemento 2...</p>
+    
   </div>
+  <!--Aqui termina la seccion de productos-->
+  
+  
+  <!--Este es el elemento div para el contenido de detalles-->
   <div id="contenido3" style="display:none">
     <h2>Contenido del Elemento 3</h2>
     
     <p>Este es el contenido del Elemento 3...</p>
   </div>
+  
+  <!--Este es el elemento div para el contenido de Store-->
    <div id="contenido4" style="display:none">
     <h2>Contenido del Elemento 4</h2>
     <p>Este es el contenido del Elemento 4...</p>
   </div>
+  
+  <!--Este es el elemento div para el contenido de contactos-->
    <div id="contenido5" style="display:none">
-    <h2>Contenido del Elemento 5</h2>
-    <p>Este es el contenido del Elemento 5...</p>
+    
+    
+    <h2>Envíanos un mensaje</h2>
+    <form action="/enviar" method="post">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+
+    <button type="submit">Enviar</button>
+</form>
+    
   </div>
   
 </div>
+</div>
+</nav>
+
+
+
+
+
 
 
 

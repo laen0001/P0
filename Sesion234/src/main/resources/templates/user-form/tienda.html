@@ -45,13 +45,20 @@ li:hover {
     width: 300px; 
     height: 200px; 
 }
+
+logo
     
   </style>
 </head>
 <body>
 
-<div class="jumbotron">
+<div  class="jumbotron">
+<div class="logo">
+<img src="static/img/logo.jpg" th:src="@{/img/logo.jpg}"/>
+</div>
+
   <div class="container text-center">
+     
     <h1>Safia Store</h1>      
     <p>Mision, Vision & Valores</p>
   </div>
@@ -99,7 +106,13 @@ li:hover {
       <div class="panel panel-primary">
         <div class="panel-heading">CARTIER</div>
         <div class="panel-body"><img src="static/img/cartier2.jpg" th:src="@{/img/cartier2.jpg}" class="responsive"   alt="Image" ></div>
-        <div class="panel-footer"> € 28.400 </div>
+       <div class="panel-footer"> € 28.400 </div>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="7R383UG79GYL6" />
+  <input type="hidden" name="currency_code" value="EUR" />
+  <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Comprar ahora" />
+</form>
       </div>
     </div>
     <div class="col-sm-4"> 
